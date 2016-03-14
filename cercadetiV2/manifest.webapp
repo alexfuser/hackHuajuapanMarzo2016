@@ -1,0 +1,39 @@
+{
+  "name": "Cerca de ti",
+  "description": "Divertida aplicación que encuentra lo que te rodea ",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/icons/icon16x16.png",
+    "48": "/icons/icon48x48.png",
+    "60": "/icons/icon60x60.png",
+    "128": "/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Gabriel, Pedro y Leidy",
+    "url": "Sorry, somos pobres sin un dominio"
+    },
+    "type": "certified",
+      "permissions":{
+        "geolocalion": {
+          "description": "Ubicarte"
+        },
+          "desktop-notification":{
+            "description": "Notificacion sobre ubicación"
+          }
+      },
+        "locales":{
+          "es":{
+            "name":"Cerca de ti",
+             "description": "Aplicación para saber que te rodea",
+             "permissions":{
+             "geolocation":{
+             "description":"Ubicarte"
+                  },
+                  "desktop-notification": {
+                    "description": "Notificaciones sobre tu ubicación"
+                  }  
+                }
+          }
+        },
+        "default_locale":"es"
+      }

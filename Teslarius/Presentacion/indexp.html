@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="refresh" content="5;url=1.html">
+
+<style type="text/css">
+	
+span{
+	margin-left: -20% ;
+	margin-top: 10%;
+	left: 40%;
+	top:10%;
+	text-decoration:none;
+	font-size: 360px;
+	}
+
+#preloader_4 span{
+	position:absolute;
+	left: 60%;
+	-webkit-animation: preloader_4 1s infinite ease-in-out;
+	-moz-animation: preloader_4 1s infinite ease-in-out;
+	-ms-animation: preloader_4 1s infinite ease-in-out;
+	-animation: preloader_4 1s infinite ease-in-out;
+
+}
+#preloader_4 span:nth-child(2){
+	left:65%;
+	-webkit-animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	-ms-animation-delay: .2s;
+	animation-delay: .2s;
+}
+#preloader_4 span:nth-child(3){
+	left:70%;
+	-webkit-animation-delay: .4s;
+	-moz-animation-delay: .4s;
+	-ms-animation-delay: .4s;
+	animation-delay: .4s;
+}
+#preloader_4 span:nth-child(4){
+	left:75%;
+	-webkit-animation-delay: .6s;
+	-moz-animation-delay: .6s;
+	-ms-animation-delay: .6s;
+	animation-delay: .6s;
+}
+
+
+@-webkit-keyframes preloader_4 {
+    0% {opacity: 0.3; -webkit-transform:translateY(0px);	
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);}
+    50% {opacity: 1; -webkit-transform: translateY(-10px); 
+		background:;	box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);}
+  	100%  {opacity: 0.3; -webkit-transform:translateY(0px);	
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);}
+}
+
+#flechas{
+	display: none;
+	margin-top: 15%;
+	margin-left: 80%; 	
+	}
+#flechas img{
+	width: 40%; 
+	}
+#flechas img:hover{
+	background: red;	
+	}
+</style>
+
+</head>
+
+<body>
+		<img src="imagenes/logo.png" width="15%" style="margin-top:10% ; margin-left:40%; top:0%; left:2%; position:relative;">
+        
+		<div id="preloader_4">
+			<span>.</span>
+			<span>.</span>
+			<span>.</span>
+			<span>.</span>
+		</div>
+	<!--<embed src="aki pon tu archivo de sonido" autostart=false true loop=true width="263" height="186"> 
+	<bgsounc src="musica.mid" loop="-1"> -->
+	<div id="flechas">
+		<img src="imagenes/sig.png">
+		<img src="imagenes/sig2.png">
+		
+	</div>
+
+</body>
+</html>

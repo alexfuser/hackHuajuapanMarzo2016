@@ -1,0 +1,41 @@
+@media screen and (max-width:1200px ) {
+.gone { display:none;
+	}
+
+
+}
+
+@media screen and (min-width:1200px ) {
+.all { display:none;
+
+	}
+
+}
+
+
+label
+{
+font-family:arial;
+font-size:17px;
+color:white;
+}
+
+::-webkit-input-placeholder {
+   color: gray;
+   font-size:17px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: gray; 
+   font-size:20px; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: gray; 
+   font-size:17px; 
+}
+
+:-ms-input-placeholder {  
+   color: gray;  
+   font-size:17px;
+}

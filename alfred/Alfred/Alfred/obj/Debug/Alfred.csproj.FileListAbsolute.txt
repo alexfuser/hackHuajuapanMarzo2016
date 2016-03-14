@@ -1,0 +1,12 @@
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\Alfred.dll.config
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\Alfred.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\Alfred.pdb
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\mysql.data.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\mysql.data.entity.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\mysql.visualstudio.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\bin\mysql.web.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\obj\Debug\Alfred.csprojResolveAssemblyReference.cache
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\obj\Debug\Alfred.dll
+C:\Users\test\documents\visual studio 2013\Projects\Alfred\Alfred\obj\Debug\Alfred.pdb
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Alfred\Alfred\obj\Debug\Alfred.csprojResolveAssemblyReference.cache
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Alfred\Alfred\obj\Debug\Alfred.dll

@@ -1,0 +1,37 @@
+/*Estilos de: panel.html*/
+*{
+	margin: 0;
+	padding: 0;
+}
+.flex{
+	display: flex;
+    min-height: 20vh;
+    flex-direction: column;
+}
+.CardsCondo{
+	width: 98%;
+}
+.card{
+	margin-right: 10px;
+}
+.CardsCondo{
+	flex: 1 0 auto;
+}
+.formularioRegistro{
+	width: 100%;
+}
+#modal1{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.busqueda{
+	width: 90%;
+}
+
+.btn1{
+	width: 100%;
+}
+.brand-logo{
+	left: 1%;
+}

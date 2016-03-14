@@ -1,0 +1,14 @@
+#municipio{
+	color: rgb(250,50,50);
+
+}
+#encabezado{
+	background:url("Imagenes/cabezaweb.jpg");
+	height: 130px;
+}
+#pie{
+	background:url("Imagenes/sabias-que.jpg");
+	height: 190px;
+	width: 785px;
+
+}

@@ -1,0 +1,249 @@
+<!DOCTYLE html>
+<html>
+<head>
+<div id=encabezado>
+<meta charset ="UTF-8">
+<meta name ="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="spoiler.css">
+	<title>TURISTA</title>
+
+</div>
+
+<table width="100%" border="0" cellpadding="5">
+<tr>
+<td>
+
+<p>
+<p id="demo">Da click en el boton para encontrar tu pocision actual.</p>
+
+<button onclick="getLocation()">Localizacion</button>
+
+<div id="mapholder"></div>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else { 
+        x.innerHTML = "El buscador no soporta la localizacion";
+    }
+}
+
+function showPosition(position) {
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+    alert(lat +"lon"+ lon);
+    latlon = new google.maps.LatLng(lat, lon)
+    mapholder = document.getElementById('mapholder')
+    mapholder.style.height = '250px';
+    mapholder.style.width = '500px';
+
+    var myOptions = {
+    center:latlon,zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    mapTypeControl:false,
+    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+    }
+    
+    var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "Solicitud invalida"
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Localizacion no valida"
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "Tiempo de espera terminado"
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "Error desconocido"
+            break;
+    }
+}
+
+</script>
+<br>
+<button onclick="filtroinfo()">Click para encontrar negocios en base a tu ubicacion actual...</button>
+
+<br>
+<script>
+
+function filtroinfo() {
+    if (navigator.geolocation) {
+    } else { 
+        
+    }
+}
+</script>
+</td>
+<td>
+<p id="Consulta localizacion">Consulta la localizacion.</p>
+<embed>
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15194.265741401625!2d-97.78306294685058!3d17.812062391570667!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1457803943393" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</embed>
+<br>
+<br>
+
+<button onclick="filtroinfo()">Click para encontrar negocios en base a la nueva localizacion.</button>
+
+<br>
+<script>
+
+function filtroinfo() {
+    if (navigator.geolocation) {
+    } else { 
+        
+    }
+}
+</script>
+
+
+</td>
+</tr>
+</table>
+<center>
+
+
+</center>
+</p>
+
+
+<script type="text/javascript">
+//Ocultar/Mostrar Div's
+OCULTO="none";
+VISIBLE="block";
+  function mostrar1(blo) {
+    document.getElementById(blo).style.display=VISIBLE;
+    document.getElementById('ver_off1').style.display=VISIBLE;
+    document.getElementById('ver_on1').style.display=VISIBLE;
+    }
+  function ocultar1(blo) {
+    document.getElementById(blo).style.display=OCULTO;
+    document.getElementById('ver_off1').style.display=OCULTO;
+    document.getElementById('ver_on1').style.display=VISIBLE;
+    }
+    
+     function mostrar2(blo) {
+    document.getElementById(blo).style.display=VISIBLE;
+    document.getElementById('ver_off2').style.display=VISIBLE;
+    document.getElementById('ver_on2').style.display=VISIBLE;
+    }
+  function ocultar2(blo) {
+    document.getElementById(blo).style.display=OCULTO;
+    document.getElementById('ver_off2').style.display=OCULTO;
+    document.getElementById('ver_on2').style.display=VISIBLE;
+    }
+
+</script>
+<center>
+<div id="ver_on1"><h2 id="titu"><a href="#" onclick="mostrar1('bloque1')" title="Consultar informacion:">Consultar informacion:</a></h2>
+<p class="copete"></p>
+</div>
+
+<div id="ver_off1" style="display: none"> 
+<table width="100%" border="0" cellpadding="5">
+<tr>
+
+<td>
+
+<script type="text/javascript">
+function mostrar(){
+document.getElementById('oculto').style.display = 'block';
+document.getElementById('oculto1').style.display = 'block';}
+</script>
+
+</head>
+<body>
+<header>
+      <nav>
+        <ul id="menu">
+          <li><a>Restaurantes</a>
+           <ul>
+              <li><a href="">Pizzas rbk</a></li>
+              <li><a href="">Doña pelos</a></li>
+            </ul> 
+            </li>
+          <li><a>  Centro cultural  </a>
+            <ul>
+              <li><a href="#" onclick="mostrar()">Parque bicentenario</a></li>
+            </ul>  
+          </li>
+          <li><a>hotel</a>
+          <ul>
+              <li><a href="">Campestre</a></li>
+              <li><a href="">Felicidad</a></li>
+            </ul> 
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id='oculto' style='display:none;'>
+Informacion del negocio:
+ <br>
+<p id="parrafo1"> <strong> Nombre del negocio: </strong> parque bicentenario </p>
+<p id="parrafo1"> <strong> Domicilio del negocio: </strong> Fray Bartolomé de Las Casas </p>
+<p id="parrafo1"> <strong> Titular del negocio: </strong> ayuntamiento </p>
+<p id="parrafo1"> <strong> Giro del negocio: </strong> Cultural</p>
+<br> <div id="imagen"></div>
+</td>
+<td><hi></hi>
+<br>
+</div>
+<div id='oculto1' style='display:none;'>
+<hi>Ubicacion del negocio.</hi>
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.5189690856014!2d-97.78238658581726!3d17.81429059504261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c601e38c35ec87%3A0xd1674ed052d2ed7d!2sParque+Bicentenario!5e0!3m2!1ses-419!2smx!4v1457769414002" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</td>
+</tr>
+</table>
+ </p>
+<h4><a href="#" onclick="ocultar1('bloque1')" title="Cerrar info">Oculta la informacion.</a></h4>
+</div>
+<div id="bloque1" style="display: none"></div>
+<div id="ver_on2"><h2 id="titulo2"><a href="#" onclick="mostrar2('bloque2')" title="Calificar">Evaluar:</a></h2>
+<p class="copete1">
+</p>
+</div>
+
+<div id="ver_off2" style="display: none">
+
+<p id="consultas positivas"> <strong> Consultas positivas vs </strong><strong>Consultas negativas</strong> </p>
+<input type="checkbox" name="puntage" value="1">Higiene<input type="checkbox" name="puntage" value="6">
+<br>
+<input type="checkbox" name="puntage" value="2">Precio<input type="checkbox" name="puntage" value="7">
+<br>
+<input type="checkbox" name="puntage" value="3">Calidad<input type="checkbox" name="puntage" value="8">
+<br>
+<input type="checkbox" name="puntage" value="4">Buen Trato<input type="checkbox" name="puntage" value="9">
+<br>
+<input type="checkbox" name="puntage" value="5">Lo recomendarias<input type="checkbox" name="puntage" value="10">
+<br>
+<p id="parrafo1"> <strong> Introduzca una brebe reseña:</strong>
+<br> 
+<textarea name="descripcion" rows="6" cols="40"> Escribe aqui...</textarea>
+
+<h4><a href="#" onclick="ocultar2('bloque2')" title="Cerrar info">Ocultar informacion</a></h4>
+</div>
+<div id="bloque2" style="display: none"> 
+<p id="txt2"> <br> 
+</p>
+</div>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+#imagen{
+  background:url("Imagenes/grafica.png");
+  height: 290px;
+  width: 405px;
+}
+#encabezado{
+	background:url("Imagenes/cabezaweb.jpg");
+	height: 130px;
+}
+
+#ver_on1{
+
+}
+
+header{
+  font-family: Helvetica;
+  width: 500px;
+  margin: 0 auto;
+  height: 40px;
+}
+ul{
+  list-style: none;
+}
+#menu li>a{
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  min-width: 100px;
+}
+#menu li>a:hover{
+  color: #000;
+  background-color: #eaeaea;
+}
+#menu>li{
+  float: left;
+  text-align:center
+}
+#menu>li>ul{
+  display: none;
+}
+#menu>li:hover>ul {
+  display:block;
+}
+<div id='oculto' style='display:none;'>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.5189690856014!2d-97.78238658581726!3d17.81429059504261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c601e38c35ec87%3A0xd1674ed052d2ed7d!2sParque+Bicentenario!5e0!3m2!1ses-419!2smx!4v1457769414002" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>

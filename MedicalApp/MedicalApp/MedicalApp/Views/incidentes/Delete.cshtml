@@ -1,0 +1,88 @@
+﻿@model MedicalApp.Models.incidente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>incidente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstatusIncidente.estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstatusIncidente.estatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notificacion.mensaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notificacion.mensaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIncidente.tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoIncidente.tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaActualizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaActualizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

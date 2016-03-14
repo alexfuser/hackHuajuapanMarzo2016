@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.contenido{
+	margin-bottom:550px;
+}
+
+.btnRegistarBanco{
+	width: 100%;
+}
+.btnCancelarB{
+	width: 100%;
+}
+
+

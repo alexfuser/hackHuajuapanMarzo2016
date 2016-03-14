@@ -1,0 +1,110 @@
+@{
+}
+<!DOCTYPE html>
+
+<!-- HACKATHON HUAJUAPAN 2016 -->
+<HTML lang="es">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <TITLE>Contactanos</TITLE>
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/animate.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+</HEAD>
+
+
+<!-- Inicio de Body -->
+<BODY>
+
+
+
+<!--  Barra de Navegacion -->
+<div class="navbar-fixed-top" style="background-color: #5d4037">
+    <nav>
+        <div class="navbar-fixed-top" style="background-color: #5d4037">
+            <a href="#" class="brand-logo center white-text page-scroll" style="align-content: center; font-size: x-large" > La voz de HUAJUAPAN</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="inicio.cshtml" class="white-text" style="font-size: medium;" > Inicio </a></li>
+                <li><a href="reportar.cshtml" class="white-text" style="font-size: medium;" > Reportar </a></li>
+                <li><a href="soluciones.cshtml" class="white-text" style="font-size: medium;"> Soluciones </a></li>
+                <li><a href="propuestas.cshtml" class="white-text" style="font-size: medium;"> Propuestas </a></li>
+                <li class="active"><a href="contacto.cshtml" class="white-text" style="font-size: medium;"> Contacto </a></li>
+                <li><a href="index.cshtml" class="white-text" style="font-size: medium;">Cerrar Sesi&uacute;n </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Header de Bienvenida -->
+<!-- Imagen en creative.css linea 175-->
+<header id="home">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 style="font-size: 65px">Ayuntamiento de Huajuapan de Le&oacute;n 2016</h1>
+            <!--<h1 style="font-size: 65px"> Final Project</h1> -->
+            <hr>
+            <p>Ponte en contacto con nosotros directamente</p>
+            <a href="mailto:ayuntamiento@huajuapan.com" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".5s" > Enviar Email </a>
+        </div>
+    </div>
+</header>
+
+<!-- Footer -->
+<footer class="page-footer  grey darken-2 wow fadeInUp" data-wow-delay=".3s">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 s12"> </div>
+            <div class="col l6 s12" style="align-content: center">
+                <!--<h1 style="font-size: 30px" class="white-text">Hackathon </h1> -->
+                <img src="img/logo3.png" style="align-content: center;  font-size: xx-large"> <br>
+                <p class="grey-text text-lighten-4" style="align-content: center;">Creciendo juntos por un mejor Futuro.</p>
+            </div>
+            <div class="col l4 s12">
+                <h1 style="font-size: 25px" class="white-text"> ¡Ponte en contacto con nosotros! </h1>
+                <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="align-content: center" ></span> </button> <br>
+                <a href="mailto:ayuntamiento@huajuapan.com" style="font-size: 15px" class="white-text"> ayuntamiento@huajuapan.com </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Ayuntamiento de Huajuapan de Le&oacute;n 2014-2016
+        </div>
+    </div>
+</footer>
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/creative.js"></script> <!-- Creative para hacer el scroll de #id_seccion mas smooth-->
+<script src="js/wow.min.js"></script> <!-- Script para utilizar animate.css y animar los scrollfires-->
+
+<!-- Script contador likes-->
+<script>
+    function inc_count(id)
+    {
+        res = document.getElementById(id);
+        res.value = parseInt(res.value)+1;
+    }
+</script>
+
+
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,226 @@
+﻿
+@model MedicalApp.Models.RegistroIncidente
+@{
+    ViewBag.Title = "Create";
+}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGSBK4lCB51IOPsVj_2s6JLw1-L1TXbus&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="~/Scripts/mapfunctions.js" type="text/javascript"></script>
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-5">
+        <div class="form-horizontal">
+            <h4>incidente</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.longitud, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.longitud, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.longitud, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.latitud, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.latitud, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.latitud, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Usuario", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBox("txtUsuario","", htmlAttributes : new { @class = "form-control text-box single-line" } )
+                </div>
+            </div>
+
+            <div class="form-group" style="display:none">
+                @Html.LabelFor(model => model.idUsuario, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.idUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.idUsuario, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.titulo, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.descripcion, htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.idTipoIncidente, "idTipoIncidente", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownList("idTipoIncidente", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.idTipoIncidente, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-9 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <input id="pac-input" class="form-control" style="right: 60px" type="text" placeholder="Search Box">
+        <div id="map" style="height:400px">
+        </div>
+        <script type="text/javascript">
+            var map;
+            var objective;
+            var userSelected;
+            var direction;
+            function initAutocomplete() {
+                
+
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 17.8013411, lng: -97.7839001 },
+                    zoom: 14
+                });
+
+                objective = new google.maps.Marker({
+                    draggable: true,
+                    map: map,
+                    title: "markup",
+                    position: { lat: 17.8013411, lng: -97.7839001 }
+                });
+
+                $("#latitud").val(17.8013411);
+                $("#longitud").val(-97.7839001);
+
+                objective.addListener('drag', function (event) {
+                    $("#latitud").val(event.latLng.lat());
+                    $("#longitud").val(event.latLng.lng());
+                });
+
+                objective.addListener('dragend', function (event) {
+                    $("#latitud").val(event.latLng.lat());
+                    $("#longitud").val(event.latLng.lng());
+                    if (userSelected) {
+                        calculateAndDisplayRoute();
+                    }
+
+                });
+
+                // Create the search box and link it to the UI element.
+                var input = document.getElementById('pac-input');
+                var searchBox = new google.maps.places.SearchBox(input);
+                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                // Bias the SearchBox results towards current map's viewport.
+                map.addListener('bounds_changed', function () {
+                    searchBox.setBounds(map.getBounds());
+                });
+
+                map.addListener('click', function (e) {
+                    placeMarkerAndPanTo(e.latLng, map);
+                });
+
+                var markers = [];
+                // Listen for the event fired when the user selects a prediction and retrieve
+                // more details for that place.
+                searchBox.addListener('places_changed', function () {
+                    var places = searchBox.getPlaces();
+
+                    if (places.length == 0) {
+                        return;
+                    }
+                    
+                    var place = places[0];
+                    // Clear out the old markers.
+                    markers.forEach(function (marker) {
+                        marker.setMap(null);
+                    });
+                    markers = [];
+
+                    // For each place, get the icon, name and location.
+                    var bounds = new google.maps.LatLngBounds();
+
+
+                    var icon = {
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    objective.setMap(null);
+
+                    objective = new google.maps.Marker({
+                        draggable: true,
+                        map: map,
+                        title: place.name,
+                        position: place.geometry.location
+                    });
+
+                    if (place.geometry.viewport) {
+                        // Only geocodes have viewport.
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+                    $("#latitud").val(place.geometry.location.lat());
+                    $("#longitud").val(place.geometry.location.lng());
+
+                    objective.addListener('drag', function (event) {
+                        $("#incidente_latitud").val(event.latLng.lat());
+                        $("#incidente_longitud").val(event.latLng.lng());
+                    });
+
+                    objective.addListener('dragend', function (event) {
+                        $("#incidente_latitud").val(event.latLng.lat());
+                        $("#incidente_longitud").val(event.latLng.lng());
+                        if (userSelected) {
+                            calculateAndDisplayRoute();
+                        }
+
+                    });
+
+                    if (userSelected) {
+                        calculateAndDisplayRoute();
+                    }
+
+                    map.fitBounds(bounds);
+                });
+
+                mostrarUsuarios();
+
+            }
+        </script>
+    </div>
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

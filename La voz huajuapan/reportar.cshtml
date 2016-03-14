@@ -1,0 +1,141 @@
+@{
+    string descripcionrepo = Request.QueryString["descripcionrepo"];
+    
+    
+    
+    var conexion = Database.Open("Hackaton_BD");
+    var peticion = conexion.Query("insert into Reporte (descripcionrepo,foto,conteo) values('"+descripcionrepo+"','C:\\Users\\Fernando\\Desktop\\imagenes\\bache.jpg',1)"); 
+    var peticiond = conexion.Query("SELECT TOP 1 * FROM Reporte ORDER BY idReporte DESC"); 
+}
+<!DOCTYPE html>
+<!-- HACKATHON HUAJUAPAN 2016 -->
+<HTML lang="es">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <TITLE>Reportar</TITLE>
+    <script type="text/javascript">
+
+    </script>
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/animate.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</HEAD>
+
+
+<!-- Inicio de Body -->
+<BODY>
+
+
+<!--  Barra de Navegacion -->
+<div class="navbar-fixed-top" style="background-color: #D32F2F">
+    <nav>
+        <div class="navbar-fixed-top" style="background-color: #D32F2F">
+            <a href="#" class="brand-logo center white-text page-scroll" style="align-content: center; font-size: x-large" > La voz de HUAJUAPAN</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="inicio.cshtml" class="white-text" style="font-size: medium;" > Inicio </a></li>
+                <li class="active"><a href="reportar.cshtml" class="white-text" style="font-size: medium;" > Reportar </a></li>
+                <li><a href="soluciones.cshtml" class="white-text" style="font-size: medium;"> Soluciones </a></li>
+                <li><a href="propuestas.cshtml" class="white-text" style="font-size: medium;"> Propuestas </a></li>
+                <li><a href="contacto.cshtml" class="white-text" style="font-size: medium;"> Contacto </a></li>
+                <li><a href="index.cshtml" class="white-text" style="font-size: medium;">Cerrar Sesi&oacute;n </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Header de Bienvenida -->
+<!-- Imagen en creative.css linea 175-->
+<header id="home">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 style="font-size: 35px">Realizar un Reporte</h1>
+            <!--<h1 style="font-size: 65px"> Final Project</h1> -->
+            <hr>
+            <p>Evita reportar alguna problem&aacute;tica ya existente</p>
+            <!-- <a href="#welcome" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".5s" > Comenzar </a> <br> -->
+
+
+        </div>
+        <!-- Forma del LOGIN -->
+            <div class="login">
+            <div class="form-page">
+                <form class="login">
+                    <h2 class="form-signin-heading"  style="color: red"> Llena la solicitud de reporte. </h2>
+                    <br>
+                    <input style="color: #000" style="font-size: 12px" type="text" name="descripcionrepo" id="desc_problem" class="form-control" placeholder="Agrega una breve descripcion" required autofocus>
+                    <form action="#">
+                        <p style="color: #000"> Selecciona la categor&iacute;a: </p>
+                        <p>
+                            <input type="radio" id="social" name="group1" class="form-control" placeholder="Ingresa una categor&iacute;a adecuada" required />
+                            <label style="color: #000" for="social"> Social </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="ambiental" name="group1" class="form-control" placeholder="Ingresa una categor&iacute;a adecuada" required />
+                            <label style="color: #000"for="ambiental"> Ambiental </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="otro" name="group1" class="form-control" placeholder="Ingresa una categor&iacute;a adecuada" required />
+                            <label style="color: #000"for="otro"> Otro </label>
+                        </p>
+                        
+
+                        <div class="file-field input-field">
+                            <div class="btn btn-link" >
+                                <span> Buscar archivo </span>
+                                
+                                <input type="file" id="fileUpload">
+                                
+                            
+                            </div>
+
+                            <br><br>
+        
+                            
+                                            </div>
+                 
+                    
+
+                    
+                    <button class="btn btn-link" type="submit" style="margin-left: 50px" onclick=""> Enviar Reporte </button>
+                     @foreach(var fila in peticiond )
+                     {
+                        if(fila.descripcionrepo == descripcionrepo)
+                        {
+                            <script type="text/javascript">
+                                window.location="inicio2.cshtml";
+                            </script>
+                        }
+                    }   
+                    </div>
+                </form>
+               </div>
+                
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+
+    </div>
+</header>
+
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/creative.js"></script> <!-- Creative para hacer el scroll de #id_seccion mas smooth-->
+<script src="js/wow.min.js"></script> <!-- Script para utilizar animate.css y animar los scrollfires-->
+</BODY>
+</HTML>

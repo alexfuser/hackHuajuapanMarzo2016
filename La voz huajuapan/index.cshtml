@@ -1,0 +1,146 @@
+﻿@{
+    string usuario = Request.QueryString["usuario"];
+    string password = Request.QueryString["password"];
+
+    var conexion = Database.Open("Hackaton_BD");
+    var peticion = conexion.Query("Select * FROM usuario where Nombre like '"+usuario+"'"); 
+}
+
+<!DOCTYPE html>
+<!-- HACKATHON HUAJUAPAN 2016 -->
+<HTML lang="es">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <TITLE>Bienvenido a La voz de Huajuapan</TITLE>
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/animate.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <script src="js/jquery.min.js">    </script>
+    <script type="text/javascript">
+        /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+        $(document).ready(function () {
+            $('#logear').click(function () {
+                /*Captura de datos escrito en los inputs*/
+                var usr = document.getElementById("inputUsuario").value;
+                var pass = document.getElementById("inputPassword").value;
+                /*Guardando los datos en el LocalStorage*/
+                localStorage.setItem("id", usr);
+                localStorage.setItem("pas", pass);
+            });
+        });
+
+        /*Funcion Cargar y Mostrar datos*/
+        $(document).ready(function () {
+            $('#boton-cargar').click(function () {
+                /*Obtener datos almacenados*/
+                var us = localStorage.getItem("id");
+                var ps = localStorage.getItem("pas");
+                /*Mostrar datos almacenados*/
+                document.getElementById("us").innerHTML = dato1;
+                alert(dato1);
+                document.getElementById("ps").innerHTML = dato2;
+                alert(dato2);
+
+            });
+        });
+
+        function muestraMensaje() {
+        alert(localStorage.getItem("id"));
+        }
+
+                </script>
+</HEAD>
+
+
+<!-- Inicio de Body -->
+<BODY>
+
+
+
+<header id="home">
+    <!--  Barra de Navegacion -->
+<div class="navbar-fixed-top" style="background-color: orange">
+    <nav>
+        <div class=" navbar-fixed-top " style="background-color: orange">
+            <a href="#home" class="brand-logo center white-text page-scroll" style="align-content: center" > La voz de Huajuapan</a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="index.cshtml" class="white-text" style="font-size: medium" > Login </a></li>
+                <li><a href="conocenos.cshtml" class="white-text" style="font-size: medium" > Con&oacute;cenos </a></li>
+                <li><a href="contacto.cshtml" class="white-text" style="font-size: medium"> Contacto </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Header de Bienvenida -->
+<!-- Imagen en creative.css linea 175-->
+    <div class="header-content">
+        <div class="header-content-inner">
+            <br><br><br><br><br><br><br><br><br><br>
+            <h1 style="font-size: 35px">Ayudando al Cambio</h1>
+            <!--<h1 style="font-size: 65px"> Final Project</h1> -->
+            <br>
+            Bienvenido a la plataforma para que todos escuchen tu voz
+
+        </div>
+        <!-- Forma del LOGIN -->
+            <div class="login-page">
+            <div class="form-page">
+                <form class="login">
+                    <div class="login-text">
+                        <h2 class="form-signin-heading"> Inicia Sesi&oacute;n </h2>
+                        <label for="inputUsuario" class="sr-only"> Nombre de Usuario </label>
+                        <input type="text" placeholder="Usuario" id="inputUsuario" name="usuario"class="form-control" placeholder="Nombre de Usuario" required autofocus>
+
+                        <label for="inputPassword" class="sr-only"> Ingresa tu Contrase&ntilde;a </label>
+                        <input type="password" placeholder="Password" id="inputPassword" name="password" class="form-control" placeholder="Ingresa tu Contrase&ntilde;a" required autofocus>
+                        <br>
+                        <button id="logear"class="btn btn-link" type="submit" style="color: #000"> Iniciar Sesi&oacute;n </button>
+                        
+                    </div>
+                </form>
+               
+                    
+                @foreach(var fila in peticion )
+                {
+                    if(fila.Nombre == usuario && fila.password==password)
+                    {
+                        <script type="text/javascript">
+                            window.location="inicio.cshtml";
+                        </script>
+                    }
+                }
+                
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+    
+
+</header>
+
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/creative.js"></script> <!-- Creative para hacer el scroll de #id_seccion mas smooth-->
+<script src="js/wow.min.js"></script> <!-- Script para utilizar animate.css y animar los scrollfires-->
+</BODY>
+</HTML>
+

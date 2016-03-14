@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<!-- HACKATHON HUAJUAPAN 2016 -->
+<HTML lang="es">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <TITLE>La voz de Huajuapan Inicio</TITLE>
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/animate.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</HEAD>
+
+
+<!-- Inicio de Body -->
+<BODY>
+
+
+<!--  Barra de Navegacion -->
+<div class="navbar-fixed-top" style="background-color: orange">
+    <nav>
+        <div class="navbar-fixed-top" style="background-color: orange">
+            <a href="#" class="brand-logo center white-text page-scroll" style="align-content: center; font-size: x-large" > La voz de HUAJUAPAN</a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="inicio2.cshtml" class="white-text" style="font-size: medium;" > Inicio </a></li>
+                <li><a href="reportar.cshtml" class="white-text" style="font-size: medium;" > Reportar </a></li>
+                <li><a href="soluciones.cshtml" class="white-text" style="font-size: medium;"> Soluciones </a></li>
+                <li><a href="propuestas.cshtml" class="white-text" style="font-size: medium;"> Propuestas </a></li>
+                <li><a href="contacto.cshtml" class="white-text" style="font-size: medium;"> Contacto </a></li>
+                <li><a href="index.cshtml" class="white-text" style="font-size: medium;">Cerrar Sesion </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Welcome Page -->
+<!-- Parte HOT (4 noticias)-->
+
+<div class="section white" id="noticias_importantes"> <br> <br> <br> <br>
+    <h1 class="center-align" style="color: black; font-size: 60px"><img src="img/fuego.png"> Acontecimientos Populares  </h1> <br> <br>
+
+    <div class="row">
+        <div class="col s12 m1"> <p></p> </div> <!-- Clean Space-->
+
+        <!--Noticia 1 -->
+
+        <div class="col s12 m4">
+            <div class="card large page-scroll wow fadeInLeft" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/bache.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Hay un bache en la calle Gomez Farias #293 ya van dos veces que paso por ahi y siempre me caigo! xD </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('a');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('b');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                  data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m1">
+            <form action="" method="">
+                <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+                <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar positivo </a> -->
+
+                <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+                <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar negativo </a> -->
+                A Favor: <input id="a" value="43" size="2" type="text" style="color:lawngreen; font-size: x-large">
+                En Contra:<input id="b" value="6" size="2" type="text" style="color:red; font-size: x-large">
+            </form>
+        </div>
+
+        <!--Noticia 2 -->
+        <div class="col s12 m4">
+            <div class="card large page-scroll wow fadeInRight" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/tuberia.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Se rompio una tuberia del canio, huele feo como mis pies y esta en el desague del rancho de San Pedrito. </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('c');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('d');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m1">
+            <form action="" method="">
+                <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+                <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar positivo </a> -->
+
+                <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+                <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar negativo </a> -->
+                A Favor: <input id="c" value="35" size="2" type="text" style="color:lawngreen; font-size: x-large">
+                En Contra:<input id="d" value="3" size="2" type="text" style="color:red; font-size: x-large">
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col s12 m1"> <p></p> </div> <!-- Clean Space-->
+
+        <!--Noticia 3 -->
+        <div class="col s12 m4">
+            <div class="card large page-scroll wow fadeInLeft" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/arbol_caido.JPG">
+                </div>
+                <div class="card-content">
+                    <p> Arbol obstruyendo el paso de la calle Benito Juarez desde hace 3 dias. </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('e');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('f');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m1">
+            <form action="" method="">
+                <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+                <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar positivo </a> -->
+
+                <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+                <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar negativo </a> -->
+                A Favor: <input id="e" value="16" size="2" type="text" style="color:lawngreen; font-size: x-large">
+                En Contra:<input id="f" value="2" size="2" type="text" style="color:red; font-size: x-large">
+            </form>
+        </div>
+
+        <!--Noticia 4 -->
+        <div class="col s12 m4">
+            <div class="card large page-scroll wow fadeInRight" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/poste.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Poste de luz a punto de caerse en la esquina de Francisco Morales y la calle de Luz Arrieta.  </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('g');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('h');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a>-->
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m1">
+        <form action="" method="">
+            <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+            <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+            animation-name: fadeInDown;"> Votar positivo </a> -->
+
+            <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+            <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+            animation-name: fadeInDown;"> Votar negativo </a> -->
+            A Favor: <input id="g" value="10" size="2" type="text" style="color:lawngreen; font-size: x-large">
+            En Contra:<input id="h" value="1" size="2" type="text" style="color:red; font-size: x-large">
+        </form>
+    </div>
+    </div>
+
+</div>
+
+
+
+<!-- ACONTECIMIENTOS RECIENTES -->
+<div class="section brown lighten-5" id="noticias_recientes"> <br>
+
+    <h1 class="center-align" style="color: black; font-size: 50px"><img src="img/alert.png">  Acontecimientos Recientes </h1> <br> <br>
+
+
+
+    <div class="row">
+        <div class="col s12 m1"> <p></p> </div> <!-- Clean Space-->
+
+        <!--Noticia 1 -->
+        <div class="col s12 m4">
+            <div class="card medium page-scroll wow fadeInLeft" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/carro.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Hay un carro abandonado en la calle Luz #340 y lleva ahi 2 anios. </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('i');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('j');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="javascript:inc_count('a');"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"> </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m1">
+            <form action="" method="">
+                <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+                <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar positivo </a> -->
+
+                <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+                <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar negativo </a> -->
+                A Favor: <input id="i" value="3" size="2" type="text" style="color:green; font-size: x-large">
+                En Contra:<input id="j" value="1" size="2" type="text" style="color:red; font-size: x-large">
+            </form>
+        </div>
+
+        <!--Noticia 2 -->
+        <div class="col s12 m4">
+            <div class="card medium page-scroll wow fadeInRight" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/alcantarilla.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Se robaron la tapa de una alcantarilla y es peligroso para los peatones. Ubicacion: Flores #400  </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('k');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('l');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m1">
+        <form action="" method="">
+            <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+            <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+            animation-name: fadeInDown;"> Votar positivo </a> -->
+
+            <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+            <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+            <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+            animation-name: fadeInDown;"> Votar negativo </a> -->
+            A Favor: <input id="k" value="2" size="2" type="text" style="color:green; font-size: x-large">
+            En Contra:<input id="l" value="0" size="2" type="text" style="color:red; font-size: x-large">
+        </form>
+    </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col s12 m1"> <p></p> </div> <!-- Clean Space-->
+
+
+
+        <!--Noticia generada-->
+        <div class="col s12 m4">
+            <div class="card medium page-scroll wow fadeInLeft" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.4s">
+                <div class="card-image">
+                    <img src="img/bache.jpg">
+                </div>
+                <div class="card-content">
+                    <p> Bache en Av. Te </p>
+                </div>
+
+                <div class="card-action">
+                    <div class="col s12 m2"> <p></p> </div> <!-- Clean Space-->
+                    <a href="javascript:inc_count('m');" style="color:green;"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                    data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar a favor</a>
+
+                    <a href="javascript:inc_count('n');" style="color:red;"> <img src="img/dislike.png" width="40" height="40" title="Votar a Favor"class="page-scroll wow fadeInDown"
+                                                                                  data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"> Votar en contra</a>
+
+                    <!--<a href="#" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar positivo </a>
+                    <a href="javascript:inc_count('a');"> <img src="img/like.png" width="40" height="40" title="Votar a Favor"> </a>
+                    <a href="#" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                    animation-name: fadeInDown;"> Votar negativo </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m1">
+            <form action="" method="">
+                <!--<span style="color: lawngreen ; font-size: x-large"> + 16 </span>-->
+
+                <!--<a href="javascript:inc_count('a');" type="button" class="btn btn-success btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar positivo </a> -->
+
+                <!--<span style="color: red ; font-size: x-large"> + 1 </span> -->
+
+                <!--<a href="javascript:inc_count('b')" type="button" class="btn btn-danger btn-xl page-scroll wow fadeInDown" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.4s;
+                animation-name: fadeInDown;"> Votar negativo </a> -->
+                A Favor: <input id="m" value="0" size="2" type="text" style="color:green; font-size: x-large">
+                En Contra:<input id="n" value="0" size="2" type="text" style="color:red; font-size: x-large">
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer  grey darken-2 wow fadeInUp" data-wow-delay=".3s">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 s12"> </div>
+            <div class="col l6 s12" style="align-content: center">
+                <!--<h1 style="font-size: 30px" class="white-text">Hackathon </h1> -->
+                <img src="img/logo3.png" style="align-content: center;  font-size: xx-large"> <br>
+                <p class="grey-text text-lighten-4" style="align-content: center;">Creciendo juntos por un mejor Futuro.</p>
+            </div>
+            <div class="col l4 s12">
+                <h1 style="font-size: 25px" class="white-text"> ¡Ponte en contacto con nosotros! </h1>
+                <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="align-content: center" ></span> </button> <br>
+                <a href="mailto:ayuntamiento@huajuapan.com" style="font-size: 15px" class="white-text"> ayuntamiento@huajuapan.com </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Ayuntamiento de Huajuapan de Leon 2014-2016
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/creative.js"></script> <!-- Creative para hacer el scroll de #id_seccion mas smooth-->
+<script src="js/wow.min.js"></script> <!-- Script para utilizar animate.css y animar los scrollfires-->
+
+<!-- Script contador likes-->
+<script>
+    function inc_count(id)
+    {
+        res = document.getElementById(id);
+        res.value = parseInt(res.value)+1;
+    }
+</script>
+
+</BODY>
+</HTML>
+

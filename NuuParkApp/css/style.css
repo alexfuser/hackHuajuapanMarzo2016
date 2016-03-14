@@ -1,0 +1,24 @@
+body{
+	background: #1976D2 ;
+}
+
+.container1{
+	background: #ffffff ;
+	border-radius: 2em;
+	margin-top: 3%;
+	left: 50%;
+}
+.container2{
+	border-radius: 2em;
+	margin-top: 4%;
+}
+.btnSubmit{
+	width: 100%;
+}
+h1{
+	font-size: 35pt;
+}
+
+.btnNewR{
+	border-radius: 25px;
+}

@@ -1,0 +1,268 @@
+*** Tiempo [Hora] definida ***
+1. /a las/
+2. /para las/
+3. /a partir de las/
+4. /a mas tardar a las/ 
+5. /en n horas, semanas, meses/
+
+*** Intervalo de tiempo [Hora] ***
+6. /de [0-9] a [0-9]/
+7. /entre las [0-9] y las [0-9]/
+
+*** Tiempo [Día] definido ***
+8. /para el/
+9 /el [Día]/
+10. /para/
+11. /dentro de/
+12. /para el/
+13. /hasta el/
+
+*** Evento recurrente ***
+
+14. Todos los [dias de la semana]
+
+
+/a partir del lunes/
+/este lunes 14 de febrero/
+12.  de este [dia] en [8].
+
+*** Intervalo de tiempo [Día] ***
+/Entre mañana y pasado/
+
+13.para las siguientes semanas.
+
+
+
+
+
+
+
+
+
+//Experimental
+(\ba la(s)?\b[ ]*\d[0-9]*)
+(\ba la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*[a.m]?[p.m]?)
+(\ba la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*)
+([a-z]*?[A-Z]*?[A-z]*?\ba la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*)([ ]*de la (mañana|tarde|noche))?([ ]* del (lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)[ ]*[0-9]*[ ]de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre))?
+([a-z]*?[A-Z]*?[A-z]*?\bpara la(s)?\b[ ]*\d[0-9]*[:]?[0-9]*)([ ]*de la (mañana|tarde|noche))?([ ]* del (lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)[ ]*[0-9]*[ ]de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre))?
+10.
+	(([a-z][A-Z][A-z])*?(\bpara\b)?[ ]*((ayer|hoy|mañana|pasado mañana)?[ ]*(dentro de [0-9]*[ ]*(día(s)?|dia(s)?)?(semana(s)?)?(mes(es)?)?)?)?[ ]*(el)?[ ]*(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?([ ]*de[ ]*[ ]*(la)?(esta)?(este)?[ ]*(proxima|próxima)?[ ]*(semana)?(mes)?[ ]*)?)
+	(([a-z][A-Z][A-z])*?(\bpara\b)?[ ]*((ayer|hoy|mañana|pasado mañana)?[ ]*(dentro de [0-9]*[ ]*(día(s)?|dia(s)?)?(semana(s)?)?(mes(es)?)?)?)?[ ]*(el)?[ ]*(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?([ ]*de[ ]*[ ]*(la)?(esta)?(este)?[ ]*(proxima(s)?|próxima(s)?)?[ ]*(semana(s)?)?(mes)?[ ]*)?)
+
+
+
+
+
+
+
+
+
+
+
+
+*** Tiempo [Hora] definida ***
+
+1. a la(s)
+([a-z]*?[A-Z]*?[A-z]*?\ba la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*)
+A las 11 de la noche enviar el correo a la profesora.
+Tener enviado el correo a más tardar a las 11.
+Enviar a la profesora el correo a las 11, es importante.
+
+2. para la(s)
+(([a-z]*?[A-Z]*?[A-z]*?)(al[ ]*\d[0-9]*[ ]*)?(\bpara la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*))
+Para las 5 de la tarde ya hay que tener listo el 80% de la práctica terminada.
+para las 3.40 de hoy, empezar a estudiar.
+Imprimir tarea. Para las 3:30 de debe acudir con el profesor; entregar.
+
+3. a partir de la(s)
+([a-z]*?[A-Z]*?[A-z]*?\ba partir de la(s)?\b[ ]*\d[0-9]*[:]?[0-9]*)
+A partir de las 3:30 empezar con la tarea de Teoría de la computacion.
+
+4. a mas tardar a la(s)
+([a-z]*?[A-Z]*?[A-z]*?\ba (mas|más) tardar a la(s)?\b[ ]*\d[0-9]*[:]?[.]?[0-9]*)
+A mas tardar a las 12 entregar los programas.
+
+5. en n horas, dias, meses.
+([a-z]*?[A-Z]*?[A-z]*?\ben\b[ ]*\d[0-9]*[ ]*(hora(s)?|dia(s)?|día(s)?|mes(es)?))
+
+
+
+
+
+*** Intervalo de tiempo [Hora] ***
+
+6. de [0-9] a [0-9]
+([a-z]*?[A-Z]*?[A-z]*?de[ ]*\d[0-9]*[:]?[.]?[0-9]*[ ]*a[ ]*\d[0-9]*[:]?[.]?[0-9]*)
+Horario de la escuela, de 6:30 a 10:30 de la noche.
+
+7. entre las [0-9] y las [0-9]
+([a-z]*?[A-Z]*?[A-z]*?entre las[ ]*\d[0-9]*[:]?[.]?[0-9]*[ ]*y las[ ]*\d[0-9]*[:]?[.]?[0-9]*)
+El ingeniero llegará entre las 9.30 y las 10 de la mañana.
+
+
+
+
+*** Tiempo [Día] definido ****
+
+8. para el [formato --/--/--]
+([a-z]*?[A-Z]*?[A-z]*?\bpara el\b[ ]\d[0-9]{0,1}((/)?\d[0-9]{0,1}(/)?\d[0-9]{0,3})?)
+Ir a la exposición. Para el 04/03/2013 tener listo el trabajo escrito.
+Para el 10 tener listo el trabajo escrito.
+
+9. el [Dia/dia de la semana]
+
+
+10. para [hoy, mañana, pasado mañana] dentro de [n dias, semanas, meses]
+(([a-z][A-Z][A-z])*?\bpara\b[ ]*(ayer|hoy|mañana|pasado mañana)?[ ]*(dentro de [0-9]*[ ]*(día(s)?|dia(s)?)?(semana(s)?)?(mes(es)?)?)?)
+para hoy necesitamos el trabajo.
+para mañana es la redacción.
+
+11. Dentro de [n días, semanas, meses]
+([a-z]*?[A-Z]*?[A-z]*?\bdentro de\b[ ]*[0-9]*[ ]*(día(s)?|dia(s)?|semana(s)?|mes(es)?))
+dentro de 2 dias es el examen de teoria de la computacion.
+El paquete de Cristian será enviado dentro de 14 días hábiles.
+
+12. Para el
+([a-z]*?[A-Z]*?[A-z]*?\bpara el\b[ ]*(proximo[ ]|próximo[ ])?(mes[ ]*(de)?)?(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?(([ ]*\d[0-9]*[ ]*de[ ]*)?[ ](enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)?)?)
+
+13. hasta el
+([a-z]*?[A-Z]*?[A-z]*?\bhasta el\b[ ]*(proximo[ ]|próximo[ ])?(mes[ ]*(de)?)?(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?(([ ]*\d[0-9]*[ ]*de[ ]*)?[ ](enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)?)?)
+
+
+
+*** Eventos recurrentes ***
+(([a-z]*?[A-Z]*?[A-z]*?)(\btod(o|a)s l(o|a)s\b[ ]*)(d(í|i)as|lunes|martes|mi(é|e)rcoles|jueves|viernes|s(á|a)bados|domingos|semanas|meses)([ ]*a las[ ]*[\d[0-9]*)?([ ]* de la (mañana|tarde|noche)?)?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+te equivocaste, el proyecto es para dentro de 2 dias.
+hay que empezar a trabajar, porque hay que entregar el proyecto para el miércoles de la proxima semana
+para el lunes de esta semana hay que terminar el proyecto
+(([a-z][A-Z][A-z])*?(\bpara\b)?[ ]*(ayer|hoy|mañana|pasado mañana)?[ ]*?((dentro de)?[ ]*[0-9]*[ ]*(día(s)?|dia(s)?|semana(s)?|(mes(es)?)?)?)?[ ]*(el?[ ]*(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?)?([ ]*de[ ]*(la?|esta?|este?)?[ ]*(proxima(s)?|próxima(s)?)?[ ]*(semana(s)?)?)?)
+
+
+
+
+
+
+
+
+(([a-z][A-Z][A-z])*?\bpara\b[ ]*((ayer|hoy|mañana|pasado mañana)?[ ]*(dentro de [0-9]*[ ]*(día(s)?|dia(s)?)?(semana(s)?)?(mes(es)?)?)?)?[ ]*((la)?(el)?)?[ ]*(lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo)?([ ]*de(l)?[ ]*[ ]*((la)?(esta)?(este)?)?[ ]*(proxima|próxima)?(siguiente)?[ ]*(semana)?(mes)?[ ]*)?)
+para la siguiente semana***
+
+
+
+
+--------------------------------------
+
+************* Fechas *************
+
+//prefijos de Fechas
+(([ ]*?(de(l)?|de el|de la)[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?
+
+/yyyy/mm/dd
+([ ]*?(19|20)[0-9]{2}[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[ ]*?)
+
+/dd/mm/yyyy
+([ ]*?(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.]((19|20)[0-9]{2})[ ]*?)
+
+/dd/de mes/de(l)?/yyyy
+([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)( de(l)? )((19|20)[0-9]{2})[ ]*?)
+
+/dd/de mes
+([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)[ ]*?)
+
+//Extensiones de Fechas
+
+([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?
+
+//completo
+(([ ]*?(de(l)?|de el|de la)[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(19|20)[0-9]{2}[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.]((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)( de(l)? )((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)[ ]*?)([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)
+
+//completo opcional
+((([ ]*?(de(l)?|de el|de la)[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(19|20)[0-9]{2}[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.]((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)( de(l)? )((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)[ ]*?)([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?))?
+
+************* horas *************
+
+hh:mm
+([ ]*?(0[1-9]|1[1-9]|2[0-3])([:/.](0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]))[ ]*?)
+
+hh
+([ ]*?(0[1-9]|1[1-9]|2[0-3])[ ]*?(hora(s)?|hr(s)?)?[ ]*?)
+
+mm
+([ ]*?(0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])( minuto(s)?| min(s)?)?[ ]?)
+
+//Extensiones de horas
+
+([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?
+
+
+//completo
+((([ ]*?(0[1-9]|1[1-9]|2[0-3])([:/.](0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]))[ ]*?)|([ ]*?(0[1-9]|1[1-9]|2[0-3])[ ]*?(hora(s)?|hr(s)?)?[ ]*?)|([ ]*?(0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])( minuto(s)?| min(s)?)?[ ]?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)
+
+//completo opcional
+((([ ]*?(0[1-9]|1[1-9]|2[0-3])([:/.](0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]))[ ]*?)|([ ]*?(0[1-9]|1[1-9]|2[0-3])[ ]*?(hora(s)?|hr(s)?)?[ ]*?)|([ ]*?(0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])( minuto(s)?| min(s)?)?[ ]?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)?
+
+
+************* Días, semanas y meses *************
+
+//prefijos de días, semanas y meses
+(([ ]*?(de(l)?|de el|de la|de cada|de este)[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?
+
+(([ ]*?(hoy|mañana|pasado (mañana)?|la pr(ó|o)xima semana|dentro de [0-9] semanas|lunes|martes|mi(é|e)rcoles|jueves|viernes|s(á|a)bado(s)?|domingo(s)?)|(semana(s)?)|(mes(es)?)[ ]*?))
+
+//Extensiones de días, semanas y meses
+
+([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?
+
+//completo
+
+(([ ]*?(de(l)?|de el|de la|de cada|cada|de est(a|e))[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(hoy|mañana|pasado (mañana)?|la pr(ó|o)xima semana|dentro de [0-9] semanas|lunes|martes|mi(é|e)rcoles|jueves|viernes|s(á|a)bado(s)?|domingo(s)?)|(semana(s)?)|(mes(es)?)[ ]*?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?
+
+//completo opcional
+((([ ]*?(de(l)?|de el|de la|de cada|cada|de est(a|e))[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(hoy|mañana|pasado (mañana)?|la pr(ó|o)xima semana|dentro de [0-9] semanas|lunes|martes|mi(é|e)rcoles|jueves|viernes|s(á|a)bado(s)?|domingo(s)?)|(semana(s)?)|(mes(es)?)[ ]*?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)?
+
+
+************* Grupo I  ************* 
+
+1. A la(s)
+2. Para la(s)
+3. A partir de la(s)
+4. A más tardar a la(s)
+5. para el
+
+(([ ]?(a la(s)?|para la(s)?|a partir de la(s)?|a m(á|a)s tardar (el|a la(s)?))[ ]))
+
+Construcción: (1,2,3,4 + horas + fechas + dias, semanas y meses)
+
+(([ ]?(a la(s)?|para la(s)?|a partir de la(s)?|a m(á|a)s tardar (el|a la(s)?)|es el|para el)[ ]))
+
+//opcional
+(([ ]?(a la(s)?|para la(s)?|a partir de la(s)?|a m(á|a)s tardar (el|a la(s)?)|es el|para el)[ ]))?
+
+(([ ]?(a la(s)?|para la(s)?|a partir de la(s)?|a m(á|a)s tardar (el|a la(s)?)|es el|para el)[ ]))((([ ]*?(0[1-9]|1[1-9]|2[0-3])([:/.](0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]))[ ]*?)|([ ]*?(0[1-9]|1[1-9]|2[0-3])[ ]*?(hora(s)?|hr(s)?)?[ ]*?)|([ ]*?(0[1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])( minuto(s)?| min(s)?)?[ ]?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)?((([ ]*?(de(l)?|de el|de la)[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(19|20)[0-9]{2}[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.]((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)( de(l)? )((19|20)[0-9]{2})[ ]*?)|([ ]*?(0[1-9]|[12][0-9]|3[01])( de )(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)[ ]*?)([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?))?((([ ]*?(de(l)?|de el|de la|de cada|cada|de est(a|e))[ ]*?)([ ]*?(pr(ó|o)xim(o|a)(s)?[ ]*?))?)?(([ ]*?(hoy|mañana|pasado (mañana)?|la pr(ó|o)xima semana|dentro de [0-9] semanas|lunes|martes|mi(é|e)rcoles|jueves|viernes|s(á|a)bado(s)?|domingo(s)?)|(semana(s)?)|(mes(es)?)[ ]*?))([ ]*?(por la|de la|en la)[ ]*?(mañana|tarde|noche)[ ]*?)?)?
+
+
+Ejemplos:
+
+Ir a Liverpool a las 04 de la tarde
+Entregar el proyecto de Teoría de la computación a las 12:30 de mañana
+a partir de la 01:20 de la tarde, la profesora va a recibir los trabajos.
+La maestra de Programación va a recibir los proyectos a las 04 de la tarde de cada mes.
+La cita con el doctor es el domingo.
+el domingo a las 11 de la noche es el partido del Manchester United
+para los compañeros de Psicología, entregar a mas tardar el 14 de este mes el CD con la presentación.
+
+-----------------------------------------
+

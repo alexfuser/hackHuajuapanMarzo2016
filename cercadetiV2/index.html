@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Cerca de ti</title>
+
+    <style>
+      body{
+        background: white;
+        padding:0px;
+        margin: 3px;
+      }
+      
+      td{
+        
+      }
+      
+      #titulo {
+        background: linear-gradient(#2E9AFE, white);
+        /*background-image: url("images/banner.png");
+        background-size: 100% 100%;*/
+        font-style: italic;
+        font-size: 23px;
+        color: White;
+        padding: 1px;
+        border-top: 0px;
+        
+      }
+      
+      #buscar{
+        z-index: 2;
+      }
+
+      #aburrido {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+         z-index: 1;
+      }
+
+      #cansado {
+        position: absolute;
+        top: 20%;
+        left: 80%;
+      }
+
+      #curioso {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+      }
+
+      #enojado {
+        position: absolute;
+        top: 55%;
+        left: 15%;
+      }
+
+      #hambriento {
+        position: absolute;
+        top: 45%;
+        left: 75%;
+      }
+
+      #enfermo {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+      }
+      
+      #escaner {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+      }
+      
+      #cerrar {
+        position: absolute;
+        top: 8%;
+        left: 80%;
+      }
+                  
+      #resultados{
+       display: none;
+      }
+      
+
+    </style>
+    <script src="jquery-1.12.1.min.js"></script>
+    <script src="app.js"  defer></script>
+
+  </head>
+
+  <body>
+    
+    
+    <div id="titulo">
+     <center>
+     <h1> Cerca de ti</h1>
+      </center>
+    </div>
+    
+    <div id="buscar">
+             
+       <input id="aburrido" type="image" src="images/aburrido.png" name="aburrido" width="180" height="150" onclick="busqueda('aburrido');"> 
+       <input id="cansado" type="image" src="images/cansado.png" name="cansado" width="150" height="150" onclick="busqueda('cansado');">
+       <input id="curioso" type="image" src="images/curioso.png" name="curioso" width="150" height="150" onclick="busqueda('curioso');">
+       <input id="enojado" type="image" src="images/enojado.png" name="enojado" width="150" height="150" onclick="busqueda('enojado');">
+       <input id="hambriento" type="image" src="images/hambriento.png" name="hambriento" width="200" height="150" onclick="busqueda('hambriento');">
+       <input id="enfermo" type="image" src="images/enfermo.png" name="enfermo" width="150" height="150" onclick="busqueda('enfermo');">
+       <input id="escaner" type="image" src="images/escaner.png" name="escaner" width="210" height="210" onclick="busqueda('escaner');">        
+      </div>
+  
+    
+    <div id="resultados">
+      <input id="cerrar" type="image" src="images/cerrar.png" name="cerrar" width="25" height="25" onclick="cerrarRes();">        
+       <iframe
+       width="500"
+       height="600"
+       frameborder="0" style="border:0"
+     src="final.html" allowfullscreen id="xd"></iframe>
+      
+    </div>
+      
+         
+  </body>
+
+</html>

@@ -1,0 +1,11 @@
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.exe.config
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.exe
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.pdb
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\obj\Debug\Expresiones.exe
+D:\Dropbox\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\obj\Debug\Expresiones.pdb
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.exe.config
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\obj\Debug\Expresiones.exe
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\obj\Debug\Expresiones.pdb
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.exe
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\bin\Debug\Expresiones.pdb
+D:\Dropbox (Alumnos Consejeros)\Archives\UPIICSA\AC Alumnos Consejeros 2015-2016\Hackathon\Expresiones\Expresiones\obj\Debug\Expresiones.csprojResolveAssemblyReference.cache

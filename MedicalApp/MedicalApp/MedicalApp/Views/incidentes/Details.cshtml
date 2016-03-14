@@ -1,0 +1,82 @@
+﻿@model MedicalApp.Models.incidente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>incidente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstatusIncidente.estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstatusIncidente.estatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notificacion.mensaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notificacion.mensaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIncidente.tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoIncidente.tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaActualizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaActualizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idIncidente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
